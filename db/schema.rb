@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_02_14_173017) do
 
   create_table "products", force: :cascade do |t|
+    t.boolean "lowest", default: false, null: false
     t.string "name"
     t.string "store"
     t.integer "price"
