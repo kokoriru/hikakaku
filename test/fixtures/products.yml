@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lowest: false
+  name: MyString
+  quantity: 1
+  weight: 1
+  unit: MyString
+  price: 1
+  non_taxed_price: 1
+  shipping_fee: 1
+  point: 1
+  sum: 1
+  store: MyString
+  url: MyString
+  description: MyText
+
+two:
+  lowest: false
+  name: MyString
+  quantity: 1
+  weight: 1
+  unit: MyString
+  price: 1
+  non_taxed_price: 1
+  shipping_fee: 1
+  point: 1
+  sum: 1
+  store: MyString
+  url: MyString
+  description: MyText
