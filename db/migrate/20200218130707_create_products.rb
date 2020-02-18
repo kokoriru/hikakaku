@@ -1,19 +1,19 @@
 class CreateProducts < ActiveRecord::Migration[6.0]
   def change
     create_table :products do |t|
-      t.boolean :lowest
-      t.string :name
-      t.integer :quantity
-      t.integer :weight
-      t.string :unit
-      t.integer :price
-      t.integer :non_taxed_price
-      t.integer :shipping_fee
-      t.integer :point
-      t.integer :sum
-      t.string :store
-      t.string :url
-      t.text :description
+      t.boolean :lowest, default: false, null: false  # 最安値
+      t.string :name              # 品名
+      t.integer :quantity         # 数量
+      t.integer :weight           # 重量
+      t.string :unit              # 単位
+      t.integer :price            # 税込金額
+      t.integer :non_taxed_price  # 税抜金額
+      t.integer :shipping_fee     # 送料
+      t.integer :point            # ポイント
+      t.integer :sum              # 合計金額
+      t.string :store             # ストア
+      t.string :url               # URL
+      t.text :description         # 備考
 
       t.timestamps
     end
