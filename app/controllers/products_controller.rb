@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-
+    set_sum
     if @product.save
       redirect_to @product, notice: 'Product was successfully created.'
     else
@@ -24,7 +24,9 @@ class ProductsController < ApplicationController
   end
 
   def update
-    if @product.update(product_params)
+    @product.attributes = product_params
+    set_sum
+    if @product.update(@product.attributes)
       redirect_to @product, notice: 'Product was successfully updated.'
     else
       render :edit
@@ -42,7 +44,17 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
+  def set_sum
+    if @product.non_taxed_price.present?
+      @product.price = @product.non_taxed_price * 1.1
+    else
+      @product.non_taxed_price = @product.price / 1.1
+    end
+    @product.sum_price = (@product.price * @product.quantity) + @product.shipping_fee - @product.point
+    @product.avarage_sum_price = @product.sum_price / @product.weight
+  end
+
   def product_params
-    params.require(:product).permit(:lowest, :name, :quantity, :weight, :unit, :price, :non_taxed_price, :shipping_fee, :point, :sum, :store, :url, :description)
+    params.require(:product).permit(:lowest, :name, :quantity, :weight, :unit, :price, :non_taxed_price, :shipping_fee, :point, :store, :url, :description)
   end
 end
