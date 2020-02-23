@@ -10,7 +10,8 @@ one:
   non_taxed_price: 1
   shipping_fee: 1
   point: 1
-  sum: 1
+  avarage_sum_price: 1
+  sum_price: 1
   store: MyString
   url: MyString
   description: MyText
@@ -25,7 +26,8 @@ two:
   non_taxed_price: 1
   shipping_fee: 1
   point: 1
-  sum: 1
+  avarage_sum_price: 1
+  sum_price: 1
   store: MyString
   url: MyString
   description: MyText

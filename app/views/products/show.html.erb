@@ -1,69 +1,69 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Lowest:</strong>
+  <strong>最安値</strong>
   <%= @product.lowest %>
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>品名</strong>
   <%= @product.name %>
 </p>
 
 <p>
-  <strong>Quantity:</strong>
-  <%= @product.quantity %>
+  <strong>数量</strong>
+  <%= @product.quantity %>個
 </p>
 
 <p>
-  <strong>Weight:</strong>
-  <%= @product.weight %>
+  <strong>重量</strong>
+  <%= @product.weight %><%= @product.unit %>
 </p>
 
 <p>
-  <strong>Unit:</strong>
-  <%= @product.unit %>
+  <strong>税抜金額</strong>
+  <%= @product.non_taxed_price %>円
 </p>
 
 <p>
-  <strong>Price:</strong>
-  <%= @product.price %>
+  <strong>税込金額</strong>
+  <%= @product.price %>円
 </p>
 
 <p>
-  <strong>Non taxed price:</strong>
-  <%= @product.non_taxed_price %>
-</p>
-
-<p>
-  <strong>Shipping fee:</strong>
+  <strong>送料</strong>
   <%= @product.shipping_fee %>
 </p>
 
 <p>
-  <strong>Point:</strong>
+  <strong>ポイント</strong>
   <%= @product.point %>
 </p>
 
 <p>
-  <strong>Sum:</strong>
-  <%= @product.sum %>
+  <strong>平均の合計</strong>
+  <%= @product.avarage_sum_price %>円
 </p>
 
 <p>
-  <strong>Store:</strong>
+  <strong>合計</strong>
+  <%= @product.sum_price %>円
+</p>
+
+<p>
+  <strong>ストア</strong>
   <%= @product.store %>
 </p>
 
 <p>
-  <strong>Url:</strong>
+  <strong>URL</strong>
   <%= @product.url %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>備考</strong>
   <%= @product.description %>
 </p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<%= link_to '編集', edit_product_path(@product) %> |
+<%= link_to '戻る', products_path %>

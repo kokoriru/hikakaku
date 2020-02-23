@@ -23,7 +23,8 @@ class ProductsTest < ApplicationSystemTestCase
     fill_in "Quantity", with: @product.quantity
     fill_in "Shipping fee", with: @product.shipping_fee
     fill_in "Store", with: @product.store
-    fill_in "Sum", with: @product.sum
+    fill_in "Avarage_sum_price", with: @product.avarage_sum_price
+    fill_in "Sum_price", with: @product.sum_price
     fill_in "Unit", with: @product.unit
     fill_in "Url", with: @product.url
     fill_in "Weight", with: @product.weight
@@ -46,7 +47,8 @@ class ProductsTest < ApplicationSystemTestCase
     fill_in "Quantity", with: @product.quantity
     fill_in "Shipping fee", with: @product.shipping_fee
     fill_in "Store", with: @product.store
-    fill_in "Sum", with: @product.sum
+    fill_in "Avarage_sum_price", with: @product.avarage_sum_pricesum
+    fill_in "Sum_price", with: @product.sum_price
     fill_in "Unit", with: @product.unit
     fill_in "Url", with: @product.url
     fill_in "Weight", with: @product.weight
