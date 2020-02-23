@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     set_sum
     if @product.save
-      redirect_to @product, notice: 'Product was successfully created.'
+      redirect_to @product, notice: '商品情報を登録しました。'
     else
       render :new
     end
@@ -27,7 +27,7 @@ class ProductsController < ApplicationController
     @product.attributes = product_params
     set_sum
     if @product.update(@product.attributes)
-      redirect_to @product, notice: 'Product was successfully updated.'
+      redirect_to @product, notice: '商品情報を更新しました。'
     else
       render :edit
     end
@@ -35,7 +35,7 @@ class ProductsController < ApplicationController
 
   def destroy
     @product.destroy
-    redirect_to products_url, notice: 'Product was successfully destroyed.'
+    redirect_to products_url, notice: '商品情報を削除しました。'
   end
 
   private
